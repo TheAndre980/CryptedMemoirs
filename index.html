@@ -1,0 +1,202 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Crypted Memoirs</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Welcome</a></li>
+							<li><a href="#one">Saved Memoirs</a></li>
+							<li><a href="#two">New Memoir</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Login  -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>Crypted Memoirs</h1>
+							<p>This is a place where you can store your Memoirs for the future generations to read</p>
+							<ul class="actions">
+								<li><button  type="submit" id="loginBtn">Log In</button></li>
+								<li><a href="#two" class="button scrolly">New Memoir</a></li>
+							</ul>
+							<p id="wallet"></p>
+							<div class="row headeralert displaynone hidden" id="headertext">
+								<div class="box shadow-sm col-12" style="text-align: center">
+								  <div class="center">Memoir <a href="#" id="newMemoirid"></a> created!</div>
+								  <div>Note: your memoir has been mined into the next Arweave block.
+								  </br>It will take some time for it to become available
+								  </br><p id="dKey"></p>
+								</div>
+								</div>
+							  </div>
+						</div>
+						
+					<div id="myModal" class="modal">
+						<!-- Modal content -->
+						<div class="modal-content">
+						<span class="close">&times;</span>
+						<p>Insert your keyfile to read or store your Memoirs</p>
+						<input type="file" id="keyfile" />
+						</div>
+					</div>
+					</section>
+
+				<!-- Saved Memoirs #One -->
+					<section id="one" class="wrapper style2 spotlights">
+
+						<section>
+								<div class="container-fluid my-3">
+
+										
+								  
+										<div class="row">
+								  
+										 
+										<div  class="inner" id ="PersonalMemoirs">
+											<h2>Personal Memoirs</h2>
+											<hr />
+												<div id="savedMemoirs"></div>
+										</div>
+										</div>
+									  </div>
+						</section>
+						<section>
+								<div class="container-fluid my-3">
+										<div class="row">
+												<div class="col-lg-9 my-1 displaynone" id="memoirDisplay">
+														<div class="p-4">
+														  <h2 id="memoirName"></h2>
+														  <hr />
+														  <pre id="preid"><code id="memoirText"></code></pre>
+														  <ul class="actions">
+																  <li><button id="decrypt" class="btn btn-dark">Decrypt</button></li>
+														  </ul>
+														  <div id="myModal2" class="modal">
+																  <!-- Modal content -->
+																  <div class="modal-content">
+																	  <div class="form-group">
+																		  <label for="textInput"><b>Insert the decryption key</b></label>
+																		  <hr />
+																		  <input type="text" class="form-control" id="decryptKey" placeholder="" />
+																	  </div>
+																	  <hr />
+																	  <ul class="actions">
+																			  <li><button id="decrypt2" class="btn btn-dark">Decrypt</button></li>
+																	  </ul>
+																  </div>
+															  </div>
+													  </div>
+													</div>
+										</div>
+					</div>
+					<div class="col-lg-9 my-1" id="newMemoir">
+						</div>
+				</section>
+
+				
+					</section>
+
+				<!-- Save or send new Memoir #Two-->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>New Memoir</h2>
+							<p>Here you can write your Memoirs</br>
+							Then you can save or send them to someone</p>
+
+							<!-- Implement write memory functionality -->
+							<!-- <br class="features"> -->
+								<section>
+								<hr />
+								<div>
+									<div class="form-group">
+									<textarea class="form-control" id="text" rows="5"></textarea>
+									</div>
+									</br>
+									<div class="form-group">
+									<label for="textInput"><b>Memoir's Title</b></label>
+									<hr />
+									<input type="text" class="form-control" id="textInput" placeholder="" />
+									</div>
+									</br>
+									<div class="form-group">
+											<label for="textInput"><b>Recipient Adress</b></label>
+											<hr />
+											<input type="text" class="form-control" id="targetAdress" placeholder="" />
+											</div>
+								</div>
+								</section>
+							</br>
+						</br>
+				
+							<!-- change this button to save button  -->
+							<ul class="actions">
+									<li></li><button id="save" class="btn btn-dark">Save</button></li>
+									<li></li><button id="saveEncrypted" class="btn btn-dark">Save Encrypted</button></li>
+									<li><button id="send" class="button">Send</button></li>
+									<li><button id="sendEncrypted" class="button">Send Encrypted</button></li>
+							</ul>
+						</div>
+					</section>
+
+					<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>CreativeCommons CSS by:</li><a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://unpkg.com/arweave/bundles/web.bundle.min.js"></script>
+			<script src="assets/js/login.js"></script>
+			<script src="assets/js/crypter.js"></script>
+			<script src="assets/js/script.js"></script>
+			<script src="assets/js/decrypter.js"></script>
+			<script src="assets/js/ecrypterSndr.js"></script>
+
+
+			<script>
+				urlVariables = getUrlVars();
+				const arweave = Arweave.init({
+				  host: "arweave.net",
+				  port: 443,
+				  protocol: "https",
+				  timeout: 20000,
+				  logging: false
+				});
+				 arweave.network.getInfo().then(console.log);
+				// getTransactionsFromAddress();
+				if (urlVariables.memoirId) {
+				  try {
+					getMemoir(urlVariables.memoirId);
+				  } catch {
+					alert("Memoir is not valid. ID is either incorrect, or the memoir hasn't been uploaded to the blockchain yet... Try again in a few minutes.");
+				  }
+				}
+			  </script>
+
+	</body>
+</html>
